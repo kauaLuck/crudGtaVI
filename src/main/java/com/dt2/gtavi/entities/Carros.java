@@ -24,6 +24,14 @@ public class Carros {
         this.descricao = descricao;
     }
 
+    public Carros(String nome, String marca, String tipo, String imagem, String descricao) {
+        this.nome = nome;
+        this.marca = marca;
+        this.tipo = tipo;
+        this.imagem = imagem;
+        this.descricao = descricao;
+    }
+
     public Carros(){}
 
     public int getId() {
@@ -74,13 +82,7 @@ public class Carros {
         this.descricao = descricao;
     }
 
-    public Carros(String nome, String marca, String tipo, String imagem, String descricao) {
-        this.nome = nome;
-        this.marca = marca;
-        this.tipo = tipo;
-        this.imagem = imagem;
-        this.descricao = descricao;
-    }
+
 
 
 

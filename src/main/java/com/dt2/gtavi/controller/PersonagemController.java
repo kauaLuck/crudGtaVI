@@ -19,7 +19,7 @@ public class PersonagemController {
     @PostMapping
     public String criarPersonagem(@RequestBody Personagem lucas){
         try {
-            return  "Calvo com sucesso" + repository.save(lucas);
+            return  "Salvo com sucesso" + repository.save(lucas);
         }
         catch (Exception e){
             return "Dados incorretos";

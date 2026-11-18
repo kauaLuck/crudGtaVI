@@ -51,6 +51,7 @@ public class ArmaController {
         arma.setDescricao(a.getDescricao());
         arma.setImagem(a.getImagem());
         arma.setCategoria(a.getCategoria());
+        repository.save(arma);
     }
 }
 

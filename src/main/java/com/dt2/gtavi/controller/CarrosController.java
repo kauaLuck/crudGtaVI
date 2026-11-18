@@ -1,14 +1,13 @@
 package com.dt2.gtavi.controller;
 
 import com.dt2.gtavi.entities.Carros;
-import com.dt2.gtavi.entities.Personagem;
 import com.dt2.gtavi.repository.CarrosRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("api/carros")
+@RequestMapping("api/veiculos")
 public class CarrosController {
 
     private final CarrosRepository repository;
@@ -16,6 +15,7 @@ public class CarrosController {
         this.repository = repository;
     }
 
+    @PostMapping
     public String criarCarro(@RequestBody Carros carros){
         try{
             return "Carro foi adicionado no sistema" + repository.save(carros);
@@ -48,6 +48,7 @@ public class CarrosController {
         carro.setTipo(c.getTipo());
         carro.setImagem(c.getImagem());
         carro.setDescricao(c.getDescricao());
+        repository.save(carro);
 
     }
 
